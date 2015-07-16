@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.security.extensions</groupId>
   <artifactId>spring-security-saml2-core</artifactId>
-  <version>1.0.1.BUILD-SNAPSHOT</version>
+  <version>1.0.2.FRESHGRADE-SNAPSHOT</version>
   <name>Spring Security SAML v2 library</name>
   <description>Spring Security SAML v2 library</description>
   <url>https://github.com/SpringSource/spring-security-saml</url>
@@ -26,6 +26,11 @@
       <archive>http://forum.springsource.org/forumdisplay.php?86-SAML</archive>
     </mailingList>
   </mailingLists>
+
+  <properties>
+    <additionalparam>-Xdoclint:none</additionalparam>
+  </properties>
+    
   <developers>
     <developer>
       <id>vschafer</id>
@@ -53,10 +58,20 @@
     <url>http://jira.springsource.org/browse/SES</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:git://github.com/SpringSource/spring-security-saml</connection>
-    <developerConnection>scm:git:git://github.com/SpringSource/spring-security-saml</developerConnection>
-    <url>https://github.com/SpringSource/spring-security-saml</url>
+    <connection>scm:git:git@github.com:FreshGrade/spring-security-saml</connection>
+    <developerConnection>scm:git:git@github.com:FreshGrade/spring-security-saml</developerConnection>
+    <url>https://github.com/FreshGrade/spring-security-saml</url>
   </scm>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>FreshGrade-Snapshots</id>
+      <url>https://nexus.onboarding.freshgrade.com/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>FreshGrade-Releases</id>
+      <url>https://nexus.onboarding.freshgrade.com/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.opensaml</groupId>
@@ -132,7 +147,7 @@
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
       <version>1.1.1</version>
-      <scope>test</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -171,4 +186,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 </project>
